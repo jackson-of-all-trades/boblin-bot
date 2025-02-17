@@ -1,3 +1,4 @@
+import config
 import discord
 
 intents = discord.Intents.default()
@@ -20,4 +21,4 @@ async def on_message(message):
     if message.content.startswith('$echo'):
         await message.channel.send(message.content.replace("$echo", ""))
 
-client.run('MTM0MDc2OTIwNzQ5ODgzMzk4MA.G9p4u1.frfywH05jWa63mdERWOJV4ZPkUlfLs2oBEbPxo')
+client.run(config.BOT_TOKEN)
